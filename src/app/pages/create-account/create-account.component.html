@@ -15,12 +15,20 @@
               <input matInput formControlName="email"/>
           </mat-form-field>
           <mat-form-field appearance="outline">
+            <mat-label>Enter you username</mat-label>
+            <input matInput formControlName="username"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
               <mat-label>Enter you password</mat-label>
               <input type="password" matInput formControlName="password"/>
           </mat-form-field>
       </form>
       <div class="buttons-container">
-          <button mat-button class="create-button">Create account</button>
+          <button mat-raised-button class="create-button">Create account</button>
+          <p>OR</p>
+          <button mat-button class="login-button"  routerLink="/login">
+            Login
+        </button>
       </div>
   </div>
 </div>
