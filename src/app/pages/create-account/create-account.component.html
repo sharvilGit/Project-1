@@ -5,22 +5,37 @@
           <mat-form-field appearance="outline">
             <mat-label>Enter your fname</mat-label>
             <input matInput formControlName="fname" />
+            <mat-error *ngIf="createForm.controls.fname">
+              {{createForm.controls.fname.hasError('required') ? 'This field is required' : ''}}
+            </mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Enter your lname</mat-label>
             <input matInput formControlName="lname" />
+            <mat-error *ngIf="createForm.controls.lname">
+              {{createForm.controls.lname.hasError('required') ? 'This field is required' : ''}}
+            </mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
               <mat-label>Enter you email</mat-label>
               <input matInput formControlName="email"/>
+              <mat-error *ngIf="createForm.controls.email.invalid">
+                {{createForm.controls.email.hasError('required') ? 'This field is requiored' : 'Email is invalid'}}
+              </mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Enter you username</mat-label>
             <input matInput formControlName="username"/>
+            <mat-error *ngIf="createForm.controls.username">
+              {{createForm.controls.username.hasError('required') ? 'This field is requiored' : 'Max length is 8'}}
+            </mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
               <mat-label>Enter you password</mat-label>
               <input type="password" matInput formControlName="password"/>
+              <mat-error *ngIf="createForm.controls.password.invalid">
+                {{createForm.controls.password.hasError('required') ? 'This field is invalid' : '6 is minium length'}}
+              </mat-error>
           </mat-form-field>
       </form>
       <div class="buttons-container">
