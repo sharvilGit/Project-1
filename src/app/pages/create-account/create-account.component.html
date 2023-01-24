@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="form-container">
+      <div class="title">Create Account</div>
+      <form [formGroup]="createForm">
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your fname</mat-label>
+            <input matInput formControlName="fname" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your lname</mat-label>
+            <input matInput formControlName="lname" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label>Enter you email</mat-label>
+              <input matInput formControlName="email"/>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+              <mat-label>Enter you password</mat-label>
+              <input type="password" matInput formControlName="password"/>
+          </mat-form-field>
+      </form>
+      <div class="buttons-container">
+          <button mat-button class="create-button">Create account</button>
+      </div>
+  </div>
+</div>
