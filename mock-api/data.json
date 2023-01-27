@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "fname": "Sharvil",
+      "lname": "Patel",
+      "email": "sharvil@gmail.com",
+      "username": "SharvilP",
+      "password": "qwerty",
+      "id": 1
+    }
+  ],
+  "posts": []
+}

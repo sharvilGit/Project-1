@@ -12,7 +12,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,8 +33,10 @@ import { CreateAccountComponent } from './pages/create-account/create-account.co
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatSnackBarModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
