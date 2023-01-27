@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-create-account',
@@ -9,7 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CreateAccountComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private userService: UserService) { }
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }
@@ -24,7 +27,13 @@ export class CreateAccountComponent implements OnInit {
 
   create() {
     this.userService.createUser(this.createForm.value).then(
-      (res) => { console.log(res);},
+      (res) => { 
+        console.log(res);
+        console.log("Account created successfully");
+        this.userService.user = res;
+        this.snackBar.open('Account Created Successfully!', 'Done', { duration: 2000 });
+        this.router.navigate(['/posts']);
+      },
     ).catch((err) => {console.log(err);
     }); 
   }

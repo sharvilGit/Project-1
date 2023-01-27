@@ -16,6 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PostsComponent } from './pages/posts/posts.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,

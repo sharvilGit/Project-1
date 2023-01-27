@@ -7,6 +7,14 @@
       "username": "SharvilP",
       "password": "qwerty",
       "id": 1
+    },
+    {
+      "fname": "some",
+      "lname": "one",
+      "email": "some@one.com",
+      "username": "some1",
+      "password": "qwerty",
+      "id": 2
     }
   ],
   "posts": []
