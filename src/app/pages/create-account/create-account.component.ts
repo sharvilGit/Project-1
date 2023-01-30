@@ -31,6 +31,7 @@ export class CreateAccountComponent implements OnInit {
         console.log(res);
         console.log("Account created successfully");
         this.userService.user = res;
+        localStorage.setItem('user', JSON.stringify(res));
         this.snackBar.open('Account Created Successfully!', 'Done', { duration: 2000 });
         this.router.navigate(['/posts']);
       },

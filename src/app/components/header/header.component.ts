@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -16,4 +17,11 @@ export class HeaderComponent implements OnInit {
   goHome(){
     this.router.navigate(['/posts']);
   }
+
+  onLogout(){
+    this.userService.user = undefined;
+    localStorage.clear();
+    this.router.navigate(['/login']);
+  }
+
 }
