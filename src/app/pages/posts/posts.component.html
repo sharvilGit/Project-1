@@ -1,3 +1,49 @@
-<p>
-  posts works!
-</p>
+<div class="container">
+  <div class="content-wrapper">
+      <mat-form-field appearance="fill">
+        <textarea [(ngModel)]="text" matInput cdkTextareaAutoSize cdkAutosizeMinRows="5" placeholder="Post"></textarea>
+      </mat-form-field>
+
+      <div class="new-post-actions-container">
+        <button mat-raised-button class="post-button" (click)="post()">Post</button>
+        <!-- <mat-form-field class="image-button">
+          <ngx-mat-file-input class="image-input" #removableInput placeholder="Upload" (change)="onFileSelected($event"></ngx-mat-file-input>
+          <button mat-icon-button matSuffix *ngIf="!removableInput.empty" (click)="removableInput.clear($event)">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </mat-form-field> -->
+      </div>
+
+    <mat-card class="post-card">
+      <mat-card-header>
+        <mat-card-title>Sharvil</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="/src/assets/tree-736885__480.jpg" alt="Tree Image">
+      <mat-card-content>
+        <p>
+          Enter the posts desc here!
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-icon-button class="like-button" disableRipple="true" (click)="likes(post.id)">
+          <mat-icon>favorite_border</mat-icon>
+        </button> 
+        <!-- <span>{{post.likes.length}}</span> -->
+      </mat-card-actions>
+      <div class="comments-container">
+        <div class="comments">
+          <div class="title">
+            Comments
+          </div>
+          <p><b>Ravi:</b> Liked it!</p>
+        </div>
+        <div class="comment-input">
+          <mat-form-field class="comment-form-field">
+            <input matInput type="text" placeholder="Add a comment">
+          </mat-form-field>
+          <button class="comment-button" mat-button>Comment</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
